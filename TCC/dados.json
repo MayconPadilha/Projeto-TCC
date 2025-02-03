@@ -1,0 +1,2360 @@
+{
+    "r": {
+        "rights": {
+            "subjects": true,
+            "classes": true,
+            "teachers": true,
+            "classrooms": true,
+            "students": true,
+            "igroups": true,
+            "classroomsupervision": true,
+            "teachers_summary": true,
+            "classes_summary": true,
+            "classrooms_summary": true,
+            "igroups_summary": true
+        },
+        "dbiAccessorRes": {
+            "type": "ttuidocdbi",
+            "dbid": "",
+            "tables": [
+                {
+                    "id": "globals",
+                    "def": {
+                        "id": "globals",
+                        "name": "Horário Escolar",
+                        "item_name": "Horário Escolar",
+                        "icon": "/global/pics/ui/school_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome da escola"
+                        },
+                        {
+                            "id": "settings",
+                            "type": "subobject",
+                            "name": "settings",
+                            "subcolumns": [
+                                {
+                                    "id": "m_nZlozitostGener",
+                                    "type": "intcombo",
+                                    "name": "m_nZlozitostGener"
+                                },
+                                {
+                                    "id": "m_bAllowZlavnenie",
+                                    "type": "checkbox",
+                                    "name": "m_bAllowZlavnenie"
+                                },
+                                {
+                                    "id": "m_bGenerDraft",
+                                    "type": "checkbox",
+                                    "name": "m_bGenerDraft"
+                                },
+                                {
+                                    "id": "m_nCoGenerovat",
+                                    "type": "intcombo",
+                                    "name": "m_nCoGenerovat"
+                                },
+                                {
+                                    "id": "m_nSchoolType",
+                                    "type": "intcombo",
+                                    "name": "School type"
+                                },
+                                {
+                                    "id": "m_nGapsCounting",
+                                    "type": "intcombo",
+                                    "name": "Janelas (contagem de lacunas)"
+                                },
+                                {
+                                    "id": "m_nTurciTyp",
+                                    "type": "intcombo",
+                                    "name": "TR School type"
+                                },
+                                {
+                                    "id": "m_bSujectsInMinutes",
+                                    "type": "checkbox",
+                                    "name": "Permitir a inserção de disciplinas em minutos por semana"
+                                },
+                                {
+                                    "id": "m_bShowComboDays",
+                                    "type": "checkbox",
+                                    "name": "Mostrar os dias na barra principal de ferramenta"
+                                },
+                                {
+                                    "id": "name_format",
+                                    "type": "combo",
+                                    "name": "Formato de nome"
+                                },
+                                {
+                                    "id": "m_strPrintHeaderText",
+                                    "type": "string",
+                                    "name": "Texto de cabeçalho"
+                                },
+                                {
+                                    "id": "m_strDateBellowTimeTable",
+                                    "type": "string",
+                                    "name": "m_strDateBellowTimeTable"
+                                },
+                                {
+                                    "id": "m_bPrintDozory",
+                                    "type": "checkbox",
+                                    "name": "Imprimir deveres em horários individuais"
+                                },
+                                {
+                                    "id": "m_bPrintDozoryVSuhrnnych",
+                                    "type": "checkbox",
+                                    "name": "Imprimir deveres no Horário resumo"
+                                },
+                                {
+                                    "id": "m_bPrintDozoryColor",
+                                    "type": "checkbox",
+                                    "name": "Imprimir as supervisões de sala na cor"
+                                },
+                                {
+                                    "id": "m_bPrintSinglesSpolu",
+                                    "type": "checkbox",
+                                    "name": "Imprimir aulas únicas consecutivas como uma aula mesclada"
+                                },
+                                {
+                                    "id": "m_bPrintDoublesAsSingles",
+                                    "type": "checkbox",
+                                    "name": "Imprimir aulas duplas como simples"
+                                },
+                                {
+                                    "id": "m_nTimeFormat",
+                                    "type": "intcombo",
+                                    "name": "Formato de Hora"
+                                },
+                                {
+                                    "id": "m_nPrvyDen",
+                                    "type": "intcombo",
+                                    "name": "Fim de semana"
+                                },
+                                {
+                                    "id": "m_bPrintDayAsNumber",
+                                    "type": "checkbox",
+                                    "name": "Mostrar o número do dia em vez do nome do dia.(Ex: Dia 1 em vez de segunda-feira)"
+                                },
+                                {
+                                    "id": "m_DozoryKriteria",
+                                    "type": "subobject",
+                                    "name": "m_DozoryKriteria",
+                                    "subcolumns": [
+                                        {
+                                            "id": "ucitel_limit_pocet",
+                                            "type": "int",
+                                            "name": "Mais/menos supervisões do que definido em detalhes do professor"
+                                        },
+                                        {
+                                            "id": "ucitel_limit_minuty",
+                                            "type": "int",
+                                            "name": "Mais/menos minutos do que definido em detalhes do professor"
+                                        },
+                                        {
+                                            "id": "ucitel_rovnomerne_pocet",
+                                            "type": "int",
+                                            "name": "Contagem igual para cada professor"
+                                        },
+                                        {
+                                            "id": "ucitel_rovnomerne_minuty",
+                                            "type": "int",
+                                            "name": "Minutos iguais para cada professor"
+                                        },
+                                        {
+                                            "id": "ucitel_uci_predalebopo",
+                                            "type": "int",
+                                            "name": "Professor leciona antes OU depois"
+                                        },
+                                        {
+                                            "id": "ucitel_uci_predajpo",
+                                            "type": "int",
+                                            "name": "Professor leciona antes E depois"
+                                        },
+                                        {
+                                            "id": "ucitel_uci_vsusednej_predalebopo",
+                                            "type": "int",
+                                            "name": "Na próxima sala de aula próxima antes OU depois"
+                                        },
+                                        {
+                                            "id": "ucitel_uci_vsusednej_predajpo",
+                                            "type": "int",
+                                            "name": "Na próxima sala de aula próxima antes E depois"
+                                        },
+                                        {
+                                            "id": "ucitel_cezdvojhodinovku",
+                                            "type": "int",
+                                            "name": "Durante aula dupla/longa"
+                                        },
+                                        {
+                                            "id": "ucitel_prazdnyden",
+                                            "type": "int",
+                                            "name": "Em um dia sem aulas"
+                                        },
+                                        {
+                                            "id": "ucitel_predvyucovanim",
+                                            "type": "int",
+                                            "name": "Antes da primeira aula do professor"
+                                        },
+                                        {
+                                            "id": "ucitel_povyucovani",
+                                            "type": "int",
+                                            "name": "Após a última aula do professor"
+                                        },
+                                        {
+                                            "id": "ucitel_vjedenden",
+                                            "type": "int",
+                                            "name": "Tudo em um dia"
+                                        },
+                                        {
+                                            "id": "ucitel_zasebou",
+                                            "type": "int",
+                                            "name": "Continuamente"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "draft_options",
+                                    "type": "subdata",
+                                    "name": "draft_options",
+                                    "subcolumns": [
+                                        {
+                                            "id": "active",
+                                            "type": "checkbox",
+                                            "name": "active"
+                                        },
+                                        {
+                                            "id": "relax",
+                                            "type": "checkbox",
+                                            "name": "relax"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "customfields",
+                            "type": "subarray",
+                            "name": "Campos personalizados",
+                            "subcolumns": [
+                                {
+                                    "id": "field",
+                                    "type": "string",
+                                    "name": "field"
+                                },
+                                {
+                                    "id": "value",
+                                    "type": "string",
+                                    "name": "value"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "reg_name",
+                            "type": "string",
+                            "name": "reg_name"
+                        },
+                        {
+                            "id": "tt_datefrom",
+                            "type": "string",
+                            "name": "tt_datefrom"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "1",
+                            "name": "",
+                            "settings": {
+                                "m_nZlozitostGener": 1,
+                                "m_bAllowZlavnenie": true,
+                                "m_bGenerDraft": false,
+                                "m_nCoGenerovat": 0,
+                                "m_nSchoolType": 0,
+                                "m_nGapsCounting": 0,
+                                "m_nTurciTyp": 0,
+                                "m_bSujectsInMinutes": false,
+                                "m_bShowComboDays": false,
+                                "name_format": "FSL",
+                                "m_strPrintHeaderText": "",
+                                "m_strDateBellowTimeTable": "Validade: 16/08/2024-21/12/2024",
+                                "m_bPrintDozory": true,
+                                "m_bPrintDozoryVSuhrnnych": false,
+                                "m_bPrintDozoryColor": false,
+                                "m_bPrintSinglesSpolu": false,
+                                "m_bPrintDoublesAsSingles": false,
+                                "m_nTimeFormat": 0,
+                                "m_nPrvyDen": 0,
+                                "m_bPrintDayAsNumber": false,
+                                "m_DozoryKriteria": {
+                                    "ucitel_limit_pocet": 0,
+                                    "ucitel_limit_minuty": 0,
+                                    "ucitel_rovnomerne_pocet": 0,
+                                    "ucitel_rovnomerne_minuty": 0,
+                                    "ucitel_uci_predalebopo": 0,
+                                    "ucitel_uci_predajpo": 0,
+                                    "ucitel_uci_vsusednej_predalebopo": 0,
+                                    "ucitel_uci_vsusednej_predajpo": 0,
+                                    "ucitel_cezdvojhodinovku": 0,
+                                    "ucitel_prazdnyden": 0,
+                                    "ucitel_predvyucovanim": 0,
+                                    "ucitel_povyucovani": 0,
+                                    "ucitel_vjedenden": 0,
+                                    "ucitel_zasebou": 0
+                                },
+                                "draft_options": {}
+                            },
+                            "customfields": [],
+                            "reg_name": "Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Sul - Campus Restinga, Rua Alberto Hoffmann, 285, Restinga, Porto Alegre",
+                            "tt_datefrom": ""
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "settings",
+                        "customfields",
+                        "reg_name",
+                        "tt_datefrom"
+                    ]
+                },
+                {
+                    "id": "periods",
+                    "def": {
+                        "id": "periods",
+                        "name": "Períodos",
+                        "item_name": "Períodos",
+                        "icon": "/global/pics/ui/time_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "1",
+                            "period": "1",
+                            "name": "1",
+                            "short": "1",
+                            "starttime": "07:30",
+                            "endtime": "08:20",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "2",
+                            "period": "2",
+                            "name": "2",
+                            "short": "2",
+                            "starttime": "08:20",
+                            "endtime": "09:10",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "3",
+                            "period": "3",
+                            "name": "3",
+                            "short": "3",
+                            "starttime": "09:10",
+                            "endtime": "10:00",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "4",
+                            "period": "4",
+                            "name": "4",
+                            "short": "4",
+                            "starttime": "10:20",
+                            "endtime": "11:10",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "5",
+                            "period": "5",
+                            "name": "5",
+                            "short": "5",
+                            "starttime": "11:10",
+                            "endtime": "12:00",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "6",
+                            "period": "6",
+                            "name": "Entre Turnos",
+                            "short": "Entre Turnos",
+                            "starttime": "12:00",
+                            "endtime": "13:30",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "7",
+                            "period": "7",
+                            "name": "1",
+                            "short": "1",
+                            "starttime": "13:30",
+                            "endtime": "14:20",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "8",
+                            "period": "8",
+                            "name": "2",
+                            "short": "2",
+                            "starttime": "14:20",
+                            "endtime": "15:10",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "9",
+                            "period": "9",
+                            "name": "3",
+                            "short": "3",
+                            "starttime": "15:10",
+                            "endtime": "16:00",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "10",
+                            "period": "10",
+                            "name": "4",
+                            "short": "4",
+                            "starttime": "16:20",
+                            "endtime": "17:10",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "11",
+                            "period": "11",
+                            "name": "5",
+                            "short": "5",
+                            "starttime": "17:10",
+                            "endtime": "18:00",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "12",
+                            "period": "12",
+                            "name": "0",
+                            "short": "0",
+                            "starttime": "18:10",
+                            "endtime": "19:00",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "13",
+                            "period": "13",
+                            "name": "1",
+                            "short": "1",
+                            "starttime": "19:00",
+                            "endtime": "19:50",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "14",
+                            "period": "14",
+                            "name": "2",
+                            "short": "2",
+                            "starttime": "19:50",
+                            "endtime": "20:40",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "15",
+                            "period": "15",
+                            "name": "3",
+                            "short": "3",
+                            "starttime": "20:50",
+                            "endtime": "21:40",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        },
+                        {
+                            "id": "16",
+                            "period": "16",
+                            "name": "4",
+                            "short": "4",
+                            "starttime": "21:40",
+                            "endtime": "22:30",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": []
+                        }
+                    ]
+                },
+                {
+                    "id": "breaks",
+                    "def": {
+                        "id": "breaks",
+                        "name": "Intervalos",
+                        "item_name": "Intervalo",
+                        "icon": "/global/pics/ui/break_32.png"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        },
+                        {
+                            "id": "starttime",
+                            "type": "time",
+                            "name": "Iniciar"
+                        },
+                        {
+                            "id": "endtime",
+                            "type": "time",
+                            "name": "Fim"
+                        },
+                        {
+                            "id": "daydata",
+                            "type": "subdata",
+                            "name": "daydata",
+                            "subcolumns": [
+                                {
+                                    "id": "starttime",
+                                    "type": "time",
+                                    "name": "Iniciar"
+                                },
+                                {
+                                    "id": "endtime",
+                                    "type": "time",
+                                    "name": "Fim"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "printinsummary",
+                            "type": "checkbox",
+                            "name": "Imprimir este período no horário resumido"
+                        },
+                        {
+                            "id": "printinteacher",
+                            "type": "checkbox",
+                            "name": "Imprimir este período em horários de cada professor"
+                        },
+                        {
+                            "id": "printinclass",
+                            "type": "checkbox",
+                            "name": "Imprimir este período em horários de cada turma"
+                        },
+                        {
+                            "id": "printinclassroom",
+                            "type": "checkbox",
+                            "name": "Imprimir este período em horários de salas de aula individuais"
+                        },
+                        {
+                            "id": "printonlyinbells",
+                            "type": "tableids",
+                            "name": "Imprimir em sinais",
+                            "table": "bells"
+                        },
+                        {
+                            "id": "printtext",
+                            "type": "string",
+                            "name": "Texto para impressões"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "4",
+                            "name": "Intervalo",
+                            "short": "Intervalo",
+                            "starttime": "10:00",
+                            "endtime": "10:20",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": [],
+                            "printtext": ""
+                        },
+                        {
+                            "id": "10",
+                            "name": "Intervalo",
+                            "short": "Intervalo",
+                            "starttime": "16:00",
+                            "endtime": "16:20",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": [],
+                            "printtext": ""
+                        },
+                        {
+                            "id": "15",
+                            "name": "Intervalo",
+                            "short": "Intervalo",
+                            "starttime": "20:40",
+                            "endtime": "20:50",
+                            "daydata": {},
+                            "printinsummary": true,
+                            "printinteacher": true,
+                            "printinclass": true,
+                            "printinclassroom": true,
+                            "printonlyinbells": [],
+                            "printtext": ""
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short",
+                        "starttime",
+                        "endtime",
+                        "daydata",
+                        "printinsummary",
+                        "printinteacher",
+                        "printinclass",
+                        "printinclassroom",
+                        "printonlyinbells",
+                        "printtext"
+                    ]
+                },
+                {
+                    "id": "bells",
+                    "def": {
+                        "id": "bells",
+                        "name": "bells",
+                        "item_name": "bells",
+                        "icon": ""
+                    },
+                    "cdefs": [
+                        {
+                            "id": "perioddata",
+                            "type": "subdata",
+                            "name": "perioddata",
+                            "subcolumns": [
+                                {
+                                    "id": "starttime",
+                                    "type": "time",
+                                    "name": "Iniciar"
+                                },
+                                {
+                                    "id": "endtime",
+                                    "type": "time",
+                                    "name": "Fim"
+                                },
+                                {
+                                    "id": "daydata",
+                                    "type": "subdata",
+                                    "name": "daydata",
+                                    "subcolumns": [
+                                        {
+                                            "id": "starttime",
+                                            "type": "time",
+                                            "name": "Iniciar"
+                                        },
+                                        {
+                                            "id": "endtime",
+                                            "type": "time",
+                                            "name": "Fim"
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "id": "breakdata",
+                            "type": "subdata",
+                            "name": "breakdata",
+                            "subcolumns": [
+                                {
+                                    "id": "starttime",
+                                    "type": "time",
+                                    "name": "Iniciar"
+                                },
+                                {
+                                    "id": "endtime",
+                                    "type": "time",
+                                    "name": "Fim"
+                                },
+                                {
+                                    "id": "daydata",
+                                    "type": "subdata",
+                                    "name": "daydata",
+                                    "subcolumns": [
+                                        {
+                                            "id": "starttime",
+                                            "type": "time",
+                                            "name": "Iniciar"
+                                        },
+                                        {
+                                            "id": "endtime",
+                                            "type": "time",
+                                            "name": "Fim"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "0",
+                            "perioddata": {},
+                            "breakdata": {}
+                        },
+                        {
+                            "id": "1",
+                            "perioddata": {},
+                            "breakdata": {}
+                        },
+                        {
+                            "id": "2",
+                            "perioddata": {},
+                            "breakdata": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "daysdefs",
+                    "def": {
+                        "id": "daysdefs",
+                        "name": "Dias",
+                        "item_name": "Dia",
+                        "icon": "/timetable/pics/days_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "vals",
+                            "type": "stringarray",
+                            "name": "vals"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "vals": [
+                                "10000"
+                            ]
+                        },
+                        {
+                            "id": "*2",
+                            "vals": [
+                                "01000"
+                            ]
+                        },
+                        {
+                            "id": "*3",
+                            "vals": [
+                                "00100"
+                            ]
+                        },
+                        {
+                            "id": "*4",
+                            "vals": [
+                                "00010"
+                            ]
+                        },
+                        {
+                            "id": "*5",
+                            "vals": [
+                                "00001"
+                            ]
+                        },
+                        {
+                            "id": "*6",
+                            "vals": [
+                                "10000",
+                                "01000",
+                                "00100",
+                                "00010",
+                                "00001"
+                            ]
+                        },
+                        {
+                            "id": "*7",
+                            "vals": [
+                                "11111"
+                            ]
+                        }
+                    ],
+                    "data_columns": [
+                        "vals"
+                    ]
+                },
+                {
+                    "id": "weeksdefs",
+                    "def": {
+                        "id": "weeksdefs",
+                        "name": "Semanas",
+                        "item_name": "Semana",
+                        "icon": "/timetable/pics/weeks_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "typ": "one",
+                            "vals": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "*2",
+                            "typ": "any",
+                            "vals": [
+                                "1"
+                            ]
+                        },
+                        {
+                            "id": "*3",
+                            "typ": "all",
+                            "vals": [
+                                "1"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "termsdefs",
+                    "def": {
+                        "id": "termsdefs",
+                        "name": "Durações",
+                        "item_name": "Duração",
+                        "icon": "/timetable/pics/terms_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "typ",
+                            "type": "enum",
+                            "name": "typ"
+                        },
+                        {
+                            "id": "vals",
+                            "type": "stringarray",
+                            "name": "vals"
+                        }
+                    ]
+                },
+                {
+                    "id": "days",
+                    "def": {
+                        "id": "days",
+                        "name": "Dias",
+                        "item_name": "Dia",
+                        "icon": "/timetable/pics/days_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "0",
+                            "name": "Segunda",
+                            "short": "Seg"
+                        },
+                        {
+                            "id": "1",
+                            "name": "Terça",
+                            "short": "Ter"
+                        },
+                        {
+                            "id": "2",
+                            "name": "Quarta",
+                            "short": "Qua"
+                        }
+                    ]
+                },
+                {
+                    "id": "weeks",
+                    "def": {
+                        "id": "weeks",
+                        "name": "Semanas",
+                        "item_name": "Semana",
+                        "icon": "/timetable/pics/weeks_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "0",
+                            "name": "Semana A",
+                            "short": "A"
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short"
+                    ]
+                },
+                {
+                    "id": "terms",
+                    "def": {
+                        "id": "terms",
+                        "name": "Durações",
+                        "item_name": "Duração",
+                        "icon": "/timetable/pics/terms_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "0",
+                            "name": "Duração 1",
+                            "short": "D1"
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short"
+                    ]
+                },
+                {
+                    "id": "buildings",
+                    "def": {
+                        "id": "buildings",
+                        "name": "Prédios",
+                        "item_name": "Prédio",
+                        "icon": "/global/pics/ui/classroom_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "color",
+                            "type": "color",
+                            "name": "Color"
+                        }
+                    ],
+                    "data_rows": [],
+                    "data_columns": [
+                        "color"
+                    ]
+                },
+                {
+                    "id": "classrooms",
+                    "def": {
+                        "id": "classrooms",
+                        "name": "Salas de aula",
+                        "item_name": "Sala de aula",
+                        "icon": "/global/pics/ui/classroom_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        },
+                        {
+                            "id": "buildingid",
+                            "type": "tableid",
+                            "name": "Prédio",
+                            "table": "buildings"
+                        },
+                        {
+                            "id": "bell",
+                            "type": "tableid",
+                            "name": "Sinais",
+                            "table": "bells"
+                        },
+                        {
+                            "id": "color",
+                            "type": "color",
+                            "name": "Color"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "-1",
+                            "name": "301",
+                            "short": "301",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#990033"
+                        },
+                        {
+                            "id": "-2",
+                            "name": "302",
+                            "short": "302",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#00CC99"
+                        },
+                        {
+                            "id": "-3",
+                            "name": "303",
+                            "short": "303",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#33CCFF"
+                        },
+                        {
+                            "id": "-4",
+                            "name": "304",
+                            "short": "304",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#C020FF"
+                        },
+                        {
+                            "id": "-5",
+                            "name": "305",
+                            "short": "305",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#40FF40"
+                        },
+                        {
+                            "id": "-6",
+                            "name": "306",
+                            "short": "306",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#C0C0C0"
+                        },
+                        {
+                            "id": "-7",
+                            "name": "307",
+                            "short": "307",
+                            "buildingid": "",
+                            "bell": "",
+                            "color": "#00FF00"
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short",
+                        "buildingid",
+                        "bell",
+                        "color"
+                    ]
+                },
+                {
+                    "id": "classes",
+                    "def": {
+                        "id": "classes",
+                        "name": "Turmas",
+                        "item_name": "Turma",
+                        "icon": "/global/pics/ui/class_32.svg"
+                    },
+                    "cdefs": [
+                        {
+                            "id": "name",
+                            "type": "string",
+                            "name": "Nome"
+                        },
+                        {
+                            "id": "short",
+                            "type": "string",
+                            "name": "Abreviação"
+                        },
+                        {
+                            "id": "teacherid",
+                            "type": "tableid",
+                            "name": "Professor da turma",
+                            "table": "teachers"
+                        },
+                        {
+                            "id": "classroomids",
+                            "type": "tableids",
+                            "name": "Home classroom",
+                            "table": "classrooms"
+                        },
+                        {
+                            "id": "bell",
+                            "type": "tableid",
+                            "name": "Sinais",
+                            "table": "bells"
+                        },
+                        {
+                            "id": "color",
+                            "type": "color",
+                            "name": "Color"
+                        },
+                        {
+                            "id": "customfields",
+                            "type": "subarray",
+                            "name": "Campos personalizados",
+                            "subcolumns": [
+                                {
+                                    "id": "field",
+                                    "type": "string",
+                                    "name": "field"
+                                },
+                                {
+                                    "id": "value",
+                                    "type": "string",
+                                    "name": "value"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "printsubjectpictures",
+                            "type": "checkbox",
+                            "name": "Imprimir imagens de disciplinas"
+                        },
+                        {
+                            "id": "edupageid",
+                            "type": "string",
+                            "name": "edupageid"
+                        },
+                        {
+                            "id": "classroomid",
+                            "type": "tableid",
+                            "name": "Sala de aula",
+                            "table": "classrooms"
+                        },
+                        {
+                            "id": "teacherids",
+                            "type": "tableids",
+                            "name": "Professores",
+                            "table": "teachers"
+                        }
+                    ],
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "name": "111",
+                            "short": "111",
+                            "teacherid": "",
+                            "classroomids": [],
+                            "bell": "0",
+                            "color": "#3333CC",
+                            "customfields": [],
+                            "printsubjectpictures": true,
+                            "edupageid": "",
+                            "classroomid": "",
+                            "teacherids": []
+                        },
+                        {
+                            "id": "*2",
+                            "name": "112",
+                            "short": "112",
+                            "teacherid": "",
+                            "classroomids": [],
+                            "bell": "0",
+                            "color": "#993333",
+                            "customfields": [],
+                            "printsubjectpictures": true,
+                            "edupageid": "",
+                            "classroomid": "",
+                            "teacherids": []
+                        },
+                        {
+                            "id": "*3",
+                            "name": "121",
+                            "short": "121",
+                            "teacherid": "",
+                            "classroomids": [],
+                            "bell": "0",
+                            "color": "#33CC33",
+                            "customfields": [],
+                            "printsubjectpictures": true,
+                            "edupageid": "",
+                            "classroomid": "",
+                            "teacherids": []
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short",
+                        "teacherid",
+                        "classroomids",
+                        "bell",
+                        "color",
+                        "customfields",
+                        "printsubjectpictures",
+                        "edupageid",
+                        "classroomid",
+                        "teacherids"
+                    ]
+                },
+                {
+                    "id": "subjects",
+                    "def": {
+                        "id": "subjects",
+                        "name": "Disciplinas",
+                        "item_name": "Disciplina",
+                        "icon": "/global/pics/ui/subject_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*173",
+                            "name": "",
+                            "short": " / Políticas e Legislação Cultural ",
+                            "color": "#0020C0",
+                            "picture_url": "",
+                            "contract_weight": 1,
+                            "edupageid": ""
+                        },
+                        {
+                            "id": "*1",
+                            "name": "",
+                            "short": "Acessibilidade e Lazer",
+                            "color": "#663300",
+                            "picture_url": "",
+                            "contract_weight": 1,
+                            "edupageid": ""
+                        },
+                        {
+                            "id": "*2",
+                            "name": "",
+                            "short": "Agente Cultural",
+                            "color": "#9620C0",
+                            "picture_url": "",
+                            "contract_weight": 1,
+                            "edupageid": ""
+                        },
+                        {
+                            "id": "*3",
+                            "name": "",
+                            "short": "Agricultura Urbana",
+                            "color": "#006699",
+                            "picture_url": "",
+                            "contract_weight": 1,
+                            "edupageid": ""
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "short",
+                        "color",
+                        "picture_url",
+                        "contract_weight",
+                        "edupageid"
+                    ]
+                },
+                {
+                    "id": "teachers",
+                    "def": {
+                        "id": "teachers",
+                        "name": "Professores",
+                        "item_name": "Professor",
+                        "icon": "/global/pics/ui/teacher_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "nameprefix": "",
+                            "namesuffix": "",
+                            "name": "Alexandre Adriano dos Santos Lima",
+                            "short": "Alexandre L",
+                            "bell": "",
+                            "color": "#006666",
+                            "fontcolorprint": "",
+                            "fontcolorprint2": "",
+                            "customfields": [],
+                            "edupageid": "",
+                            "classids": []
+                        },
+                        {
+                            "id": "*2",
+                            "nameprefix": "",
+                            "namesuffix": "",
+                            "name": "Alexsandro Cristóvão Bonatto",
+                            "short": "Alexsandro B",
+                            "bell": "",
+                            "color": "#FFCCCC",
+                            "fontcolorprint": "",
+                            "fontcolorprint2": "",
+                            "customfields": [],
+                            "edupageid": "",
+                            "classids": []
+                        },
+                        {
+                            "id": "*3",
+                            "nameprefix": "",
+                            "namesuffix": "",
+                            "name": "Anderson Hakenhoar de Matos",
+                            "short": "Anderson M",
+                            "bell": "",
+                            "color": "#CCFF33",
+                            "fontcolorprint": "",
+                            "fontcolorprint2": "",
+                            "customfields": [],
+                            "edupageid": "",
+                            "classids": []
+                        }
+                    ],
+                    "data_columns": [
+                        "nameprefix",
+                        "namesuffix",
+                        "name",
+                        "short",
+                        "bell",
+                        "color",
+                        "fontcolorprint",
+                        "fontcolorprint2",
+                        "customfields",
+                        "edupageid",
+                        "classids"
+                    ]
+                },
+                {
+                    "id": "groups",
+                    "def": {
+                        "id": "groups",
+                        "name": "Grupos",
+                        "item_name": "Grupo",
+                        "icon": "/global/pics/ui/group_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "name": "Turma completa",
+                            "classid": "*1",
+                            "entireclass": true,
+                            "ascttdivision": "",
+                            "divisionid": "*1:",
+                            "color": "#FF0000"
+                        },
+                        {
+                            "id": "*2",
+                            "name": "Grupo 1",
+                            "classid": "*1",
+                            "entireclass": false,
+                            "ascttdivision": "1",
+                            "divisionid": "*1:1",
+                            "color": "#00FF00"
+                        },
+                        {
+                            "id": "*3",
+                            "name": "Grupo 2",
+                            "classid": "*1",
+                            "entireclass": false,
+                            "ascttdivision": "1",
+                            "divisionid": "*1:1",
+                            "color": "#0000FF"
+                        }
+                    ],
+                    "data_columns": [
+                        "name",
+                        "classid",
+                        "entireclass",
+                        "ascttdivision",
+                        "divisionid",
+                        "color"
+                    ]
+                },
+                {
+                    "id": "divisions",
+                    "def": {
+                        "id": "divisions",
+                        "name": "divisions",
+                        "item_name": "divisions",
+                        "icon": "/timetable/pics/app/office/division_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1:",
+                            "classid": "*1",
+                            "ascttdivision": "",
+                            "groupids": [
+                                "*1"
+                            ]
+                        },
+                        {
+                            "id": "*1:1",
+                            "classid": "*1",
+                            "ascttdivision": "1",
+                            "groupids": [
+                                "*2",
+                                "*3"
+                            ]
+                        },
+                        {
+                            "id": "*1:2",
+                            "classid": "*1",
+                            "ascttdivision": "2",
+                            "groupids": [
+                                "*4",
+                                "*5"
+                            ]
+                        },
+                        {
+                            "id": "*6:",
+                            "classid": "*6",
+                            "ascttdivision": "",
+                            "groupids": [
+                                "*6"
+                            ]
+                        },
+                        {
+                            "id": "*6:1",
+                            "classid": "*6",
+                            "ascttdivision": "1",
+                            "groupids": [
+                                "*7",
+                                "*8"
+                            ]
+                        },
+                        {
+                            "id": "*59:2",
+                            "classid": "*59",
+                            "ascttdivision": "2",
+                            "groupids": [
+                                "*294",
+                                "*295"
+                            ]
+                        }
+                    ],
+                    "data_columns": [
+                        "classid",
+                        "ascttdivision",
+                        "groupids"
+                    ]
+                },
+                {
+                    "id": "lessons",
+                    "def": {
+                        "id": "lessons",
+                        "name": "Aulas",
+                        "item_name": "Aula",
+                        "icon": "/global/pics/ui/lessons_32.svg"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "subjectid": "*16",
+                            "teacherids": [
+                                "*6"
+                            ],
+                            "groupids": [
+                                "*1"
+                            ],
+                            "classids": [
+                                "*1"
+                            ],
+                            "count": 1,
+                            "durationperiods": 2,
+                            "termsdefid": "*3",
+                            "weeksdefid": "*3",
+                            "daysdefid": "*6",
+                            "terms": "1",
+                            "seminargroup": null,
+                            "texts": null,
+                            "studentids": [],
+                            "groupnames": [
+                                ""
+                            ],
+                            "classdata": {
+                                "*1": {
+                                    "divisionid": "*1:",
+                                    "groups": "1"
+                                }
+                            }
+                        },
+                        {
+                            "id": "*376",
+                            "subjectid": "*266",
+                            "teacherids": [],
+                            "groupids": [],
+                            "classids": [],
+                            "count": 1,
+                            "durationperiods": 4,
+                            "termsdefid": "*3",
+                            "weeksdefid": "*3",
+                            "daysdefid": "*6",
+                            "terms": "1",
+                            "seminargroup": null,
+                            "texts": null,
+                            "studentids": [],
+                            "groupnames": [],
+                            "classdata": {}
+                        }
+                    ]
+                },
+                {
+                    "id": "cards",
+                    "def": {
+                        "id": "cards",
+                        "name": "Cartões",
+                        "item_name": "Cartão",
+                        "icon": "/timetable/pics/app/card_32.png"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*1",
+                            "lessonid": "*1",
+                            "locked": false,
+                            "period": "1",
+                            "days": "00001",
+                            "weeks": "1",
+                            "classroomids": [
+                                "-61"
+                            ]
+                        },
+                        {
+                            "id": "*2",
+                            "lessonid": "*2",
+                            "locked": false,
+                            "period": "5",
+                            "days": "00100",
+                            "weeks": "1",
+                            "classroomids": [
+                                "-1"
+                            ]
+                        },
+                        {
+                            "id": "*3",
+                            "lessonid": "*3",
+                            "locked": false,
+                            "period": "4",
+                            "days": "00100",
+                            "weeks": "1",
+                            "classroomids": [
+                                "-1"
+                            ]
+                        },
+                        {
+                            "id": "*4",
+                            "lessonid": "*4",
+                            "locked": false,
+                            "period": "3",
+                            "days": "00100",
+                            "weeks": "1",
+                            "classroomids": [
+                                "-1"
+                            ]
+                        },
+                        {
+                            "id": "*386",
+                            "lessonid": "*68",
+                            "locked": false,
+                            "period": "",
+                            "days": "",
+                            "weeks": "",
+                            "classroomids": []
+                        }
+                    ]
+                },
+                {
+                    "id": "ttreports",
+                    "def": {
+                        "id": "ttreports",
+                        "name": "Relatórios",
+                        "item_name": "Relatórios",
+                        "icon": "/timetable/pics/app/print_preview_32.png"
+                    },
+                    "data_rows": [
+                        {
+                            "id": "*25",
+                            "typ": 0,
+                            "fitwidth": true,
+                            "fitheight": true,
+                            "hideemptycolumns": true,
+                            "hideemptyrows": true,
+                            "headerwidth": 0.1,
+                            "headerheight": 0.1,
+                            "cellwidth": 0.1,
+                            "cellheight": 0.1,
+                            "page_tables": [
+                                "classes"
+                            ],
+                            "row_tables": [
+                                "periods"
+                            ],
+                            "column_tables": [
+                                "days"
+                            ],
+                            "celltype": 0,
+                            "cardcolorenabled": true,
+                            "cardcolortable1": "",
+                            "cardcolortable2": "",
+                            "cardcolorpos": "",
+                            "cardstyles": [
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 0,
+                                    "m_nPocetRiadkov": 0,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 1,
+                                    "m_nPocetRiadkov": 0,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 4,
+                                    "m_nPocetRiadkov": 0,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 2,
+                                    "m_nPocetRiadkov": 0,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 3,
+                                    "m_nPocetRiadkov": 0,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 1,
+                                    "m_nPocetRiadkov": 1,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                },
+                                {
+                                    "texts": {
+                                        "subjects": {
+                                            "enabled": true,
+                                            "pos": 7,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "",
+                                            "autohide": false
+                                        },
+                                        "teachers": {
+                                            "enabled": true,
+                                            "pos": 3,
+                                            "size": 0.12,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "name_col": "name",
+                                            "autohide": false
+                                        },
+                                        "classrooms": {
+                                            "enabled": true,
+                                            "pos": 6,
+                                            "size": 0.16,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "groupnames": {
+                                            "enabled": true,
+                                            "pos": 1,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": true,
+                                            "name_col": ""
+                                        },
+                                        "classes": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.1,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "count": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.2,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        },
+                                        "time": {
+                                            "enabled": false,
+                                            "pos": 0,
+                                            "size": 0.06,
+                                            "font": "Arial",
+                                            "bold": false,
+                                            "italic": false,
+                                            "underline": false,
+                                            "autohide": false,
+                                            "name_col": ""
+                                        }
+                                    },
+                                    "m_nDlzka": 0,
+                                    "m_nPocetRiadkov": 1,
+                                    "m_nBezTriedyAleboUcitela": 1
+                                }
+                            ],
+                            "classroomsupervisionstyle": {
+                                "size": 0.1,
+                                "font": "Arial",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            },
+                            "gridheadertexts": {
+                                "days": {
+                                    "size": 0.4,
+                                    "font": "Arial",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underline": false,
+                                    "column": "short",
+                                    "pos": null,
+                                    "enabled": null
+                                },
+                                "periods": {
+                                    "size": 0.33,
+                                    "font": "Arial",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underline": false,
+                                    "pos": 0,
+                                    "enabled": null,
+                                    "column": ""
+                                },
+                                "time": {
+                                    "enabled": true,
+                                    "size": 0.14,
+                                    "font": "Arial",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underline": false,
+                                    "pos": 5,
+                                    "column": ""
+                                },
+                                "objects": {
+                                    "size": 0.4,
+                                    "font": "Arial",
+                                    "bold": false,
+                                    "italic": false,
+                                    "underline": false,
+                                    "column": "short",
+                                    "pos": null,
+                                    "enabled": null
+                                }
+                            },
+                            "pageheader": {
+                                "size": 0.071429,
+                                "font": "Arial",
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            },
+                            "pageheaderprefixenabled": true,
+                            "userheader": {
+                                "text": "",
+                                "font": "Arial",
+                                "size": 0.033333,
+                                "bold": false,
+                                "italic": false,
+                                "underline": false
+                            },
+                            "settings": {
+                                "m_nSirkaCiaryLesson": 1,
+                                "m_nSirkaCiaryOkraj": 1,
+                                "m_nSirkaCiaryDen": 1
+                            },
+                            "landscape": true,
+                            "repeatpage": 1,
+                            "splitpage_h": 1,
+                            "splitpage_w": 1,
+                            "splitpageorder": false,
+                            "withclassroomtt": false,
+                            "printlogo": false,
+                            "printlogo_url": "",
+                            "name": "Horário de cada turma",
+                            "extracolumns": [],
+                            "extrarows": [],
+                            "rowheadercolors": {
+                                "enabled": false,
+                                "bgcolor1": "",
+                                "bgcolor2": "",
+                                "fontcolor": ""
+                            },
+                            "columnheadercolors": {
+                                "enabled": false,
+                                "bgcolor1": "",
+                                "bgcolor2": "",
+                                "fontcolor": ""
+                            }
+                        }
+                    ]
+                }
+            ],
+            "changeEvents": {
+                "dbi:timetables": 4607037,
+                "ttonline_logo": 3366837
+            }
+        },
+        "_changeEvents": {
+            "dbi:global_settings": 7341156
+        }
+    }
+}
