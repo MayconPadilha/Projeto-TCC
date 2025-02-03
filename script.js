@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://mayconpadilha.github.io/Banco-JSON/TCC/dadosDefault.json')
+    fetch('https://mayconpadilha.github.io/Projeto-TCC/TCC/dadosDefault.json')
         .then(response => response.json())
         .then(data => {
             // Mapeando os dados das tabelas
